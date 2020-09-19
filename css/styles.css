@@ -1,0 +1,177 @@
+/* Typography */
+
+* {
+    line-height: 1.5em;
+    color: #777;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif, serif;
+}
+
+body {
+    padding: 20px;
+    background-color: rgb(121, 34, 34);
+}
+
+h1 {
+    color: white;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: #444;
+    font-size: 1.2rem;
+}
+
+hr {
+    margin: 17px auto;
+}
+
+p {
+    font-size: .8rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Grid container */
+
+@media (min-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+    }
+}
+
+@media (min-width: 1024px) {
+    #container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+/* Card */
+
+.card {
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 20px 15px;
+    height: 150px;
+    display: grid;
+    grid-template-areas: "img info";
+    grid-template-columns: auto 1fr;
+    min-width: 270px;
+    transition: all .4s ease-in-out;
+    box-shadow: 5px 5px 3px 6px rgb(94, 12, 12);
+}
+
+.card:hover {
+    background-color: rgb(249, 229, 229);
+}
+
+.card img {
+    grid-area: img;
+    min-width: 0;
+    border-radius: 50%;
+    height: 110px;
+    margin-right: 15px;
+}
+
+.card-info {
+    grid-area: info;
+    min-width: 0;
+}
+
+.card-info p {
+    max-width: 90%;
+    word-break: break-word;
+}
+
+@media (max-width: 450px) {
+    .card {
+        display: block;
+        height: auto;
+        text-align: center;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .card img {
+        height: 140px;
+    }
+    .card-info {
+        text-align: center;
+    }
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 40px 20px;
+    border: 1px solid #888;
+    max-width: 95%;
+    width: 220px;
+    /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media (min-width: 400px) {
+    .modal-content {
+        width: 320px;
+    }
+}
+
+.modal-content img {
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin-top: 5px;
+}
+
+/* The Close Button */
+
+.close {
+    color: #555;
+    margin-top: -35px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
