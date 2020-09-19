@@ -69,7 +69,7 @@ function generateCard(employee, card) {
 function generateModalContent(employee, modalContent) {
     const html = `
         <span class="close">&times;</span>
-        <img src="${employee.picture.medium}" alt="Profile photo of ${employee.name.first} ${employee.name.last}">
+        <img src="${employee.picture.large}" alt="Profile photo of ${employee.name.first} ${employee.name.last}">
         <h2 class="name">${employee.name.first} ${employee.name.last}</h2>
         <p class="email">${employee.email}</p>
         <p class="city">${employee.location.city}</p> 
